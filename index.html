@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portofolio profesional — Desain & Pengembangan Web" />
+  <meta name="author" content="Alief" />
+
+  <title>Alief Nur Arfan— Portofolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+
+  <!-- Devicon (CDN for Tech Stack Logos) -->
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ===== FLOATING NAVBAR ===== -->
+  <nav class="floating-nav" id="floating-nav">
+    <a href="#" class="floating-nav__logo">A<span class="accent">.</span></a>
+
+    <ul class="floating-nav__links" id="nav-links">
+      <li><a href="#hero" class="floating-nav__link active">Home</a></li>
+      <li><a href="#about" class="floating-nav__link">About</a></li>
+      <li><a href="#skills" class="floating-nav__link">Skills</a></li>
+      <li><a href="#projects" class="floating-nav__link">Projects</a></li>
+      <li><a href="#contact" class="floating-nav__link">Contact</a></li>
+    </ul>
+
+    <button class="floating-nav__burger" id="nav-burger" aria-label="Toggle menu">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile overlay menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="mobile-menu__links">
+      <li><a href="#hero" class="mobile-menu__link">Home</a></li>
+      <li><a href="#about" class="mobile-menu__link">About</a></li>
+      <li><a href="#skills" class="mobile-menu__link">Skills</a></li>
+      <li><a href="#projects" class="mobile-menu__link">Projects</a></li>
+      <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ===== HERO (Dark + Spotlight) ===== -->
+    <section class="section section--dark hero" id="hero">
+      <div class="hero__spotlight" aria-hidden="true"></div>
+      <div class="container hero__container">
+        <p class="hero__greeting">Hello, I'm</p>
+        <h1 class="hero__name">
+          MUH. ALIEF NUR<br class="mobile-break" /> AFANNI ARFAN
+        </h1>
+        <p class="hero__roles">
+          Web Developer
+          <span class="hero__dot">•</span>
+          UI/UX Enthusiast
+          <span class="hero__dot">•</span>
+          Graphic Designer
+          <span class="hero__dot">•</span>
+          Photographer
+        </p>
+        <a href="#about" class="hero__cta">
+          Get to Know me
+          <i data-lucide="arrow-right" class="hero__cta-icon"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== PERSONA / ABOUT (Light + Dot Pattern) ===== -->
+    <section class="section persona" id="about">
+      <div class="persona__dots" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="persona__title"><em>Persona</em></h2>
+
+        <div class="persona__grid">
+          <!-- Kolom Kiri: Foto Profil -->
+          <div class="persona__photo-col">
+            <div class="persona__photo-frame">
+              <!-- Ganti src dengan assets/images/profile.jpg jika file sudah siap -->
+              <img src="assets/images/profile.svg" alt="Foto Profil — Muh. Alief Nur Afanni" class="persona__photo"
+                loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Kolom Kanan: Bio + Aksi -->
+          <div class="persona__info">
+            <p class="persona__bio">
+              Information Systems student at Hasanuddin University with a strong passion for 
+              digital product creation and visual media. Skilled in web development, UI/UX 
+              design, graphic design, and photography, developed through academic projects, 
+              developer workshops, and hands-on practice. Proficient in HTML, CSS, JavaScript, 
+              Tailwind, Canva, Figma, and modern development tools, and adept at leveraging 
+              AI tools to enhance workflow efficiency. A creative and detail-oriented 
+              individual with strong problem-solving skills, committed to delivering functional 
+              and aesthetically impactful digital experiences.
+            </p>
+
+            <!-- Social & CTA -->
+            <div class="persona__actions">
+              <div class="persona__socials">
+                <a href="https://github.com/aliefnarfan/" target="_blank" rel="noopener noreferrer" class="persona__social-btn"
+                  aria-label="GitHub">
+                  <i class="devicon-github-plain"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/muh-alief-nur-afanni-arfan-9b3453322/" target="_blank" rel="noopener noreferrer" class="persona__social-btn"
+                  aria-label="LinkedIn">
+                  <i class="devicon-linkedin-plain"></i>
+                </a>
+              <!-- 1. PERBAIKAN TOMBOL PREVIEW CV -->
+              <a href="javascript:void(0)" class="persona__cv-btn" id="cv-btn">
+                <i data-lucide="file-text" class="persona__cv-icon"></i>
+                Preview CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SELIPKAN ELEMEN MODAL INI TEPAT DI SINI -->
+    <div class="cv-modal" id="cv-modal" aria-hidden="true">
+      <div class="cv-modal__backdrop" id="cv-modal-backdrop"></div>
+      <div class="cv-modal__dialog">
+        <button class="cv-modal__close" id="cv-modal-close" aria-label="Tutup Preview CV">
+          <i data-lucide="x"></i>
+        </button>
+        <div class="cv-modal__body">
+          <!-- PATH CV ANDA SUDAH DISESUAIKAN -->
+          <iframe src="assets/images/cv_alief.pdf#toolbar=0" class="cv-modal__iframe" title="Preview CV Muh. Alief Nur Afanni"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== EDUCATION & TECH STACK (Light) ===== -->
+    <section class="section section--light edu-tech" id="skills">
+      <div class="container">
+        <div class="edu-tech__grid">
+          <!-- Kolom Kiri: Education & Skills -->
+          <div class="edu-tech__col edu-tech__col--left">
+            <div class="edu-tech__section-title">
+              <span class="edu-tech__eyebrow">Background</span>
+              <h3 class="edu-tech__title">Education &amp; Skills</h3>
+            </div>
+
+            <!-- Kartu Pendidikan Formal -->
+            <div class="edu-card">
+              <div class="edu-card__header">
+                <div class="edu-card__badge-wrap">
+                  <span class="edu-card__icon-box">
+                    <i data-lucide="graduation-cap"></i>
+                  </span>
+                  <span class="edu-card__badge">Formal Education</span>
+                </div>
+                <h4 class="edu-card__univ">Hasanuddin University</h4>
+              </div>
+
+              <div class="edu-card__body">
+                <div class="edu-card__program">
+                  <span class="edu-card__degree-tag">B.Sc.</span>
+                  <span class="edu-card__major">Information Systems</span>
+                </div>
+
+                <div class="edu-card__meta">
+                  <div class="edu-card__meta-item">
+                    <i data-lucide="calendar" class="edu-card__meta-icon"></i>
+                    <span>2025 — Present</span>
+                  </div>
+                  <div class="edu-card__meta-item edu-card__meta-item--highlight">
+                    <i data-lucide="award" class="edu-card__meta-icon"></i>
+                    <span>GPA: 3.74 / 4.00</span>
+                  </div>
+                </div>
+
+                <p class="edu-card__desc">
+                  Focusing on system integration, business process modeling, modern web 
+                  engineering, database architecture, and user-centered UI/UX design.
+                </p>
+              </div>
+            </div>
+
+            <!-- Sub-section: Hard Skills -->
+            <div class="skills-block">
+              <h4 class="skills-block__title">
+                <span class="skills-block__icon-box">
+                  <i data-lucide="code-2"></i>
+                </span>
+                Hard Skills
+              </h4>
+              <div class="skills-pills">
+                <span class="skill-pill">Frontend Development</span>
+                <span class="skill-pill">Graphic Design</span>
+                <span class="skill-pill">Responsive Layouts</span>
+                <span class="skill-pill">Database Management</span>
+                <span class="skill-pill">Version Control (Git)</span>
+                <span class="skill-pill">Exposure Triangle</span>
+                <span class="skill-pill">Visual Composition</span>
+                <span class="skill-pill">Color Grading</span>
+              </div>
+            </div>
+
+            <!-- Sub-section: Soft Skills -->
+            <div class="skills-block">
+              <h4 class="skills-block__title">
+                <span class="skills-block__icon-box skills-block__icon-box--soft">
+                  <i data-lucide="sparkles"></i>
+                </span>
+                Soft Skills
+              </h4>
+              <div class="skills-pills">
+                <span class="skill-pill skill-pill--soft">Problem Solving</span>
+                <span class="skill-pill skill-pill--soft">Team Collaboration</span>
+                <span class="skill-pill skill-pill--soft">Critical Thinking</span>
+                <span class="skill-pill skill-pill--soft">Effective Communication</span>
+                <span class="skill-pill skill-pill--soft">Adaptability</span>
+                <span class="skill-pill skill-pill--soft">Time Management</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom Kanan: Tech & Tools -->
+          <div class="edu-tech__col edu-tech__col--right">
+            <div class="edu-tech__section-title">
+              <span class="edu-tech__eyebrow">Arsenal</span>
+              <h3 class="edu-tech__title">Tech &amp; Tools</h3>
+            </div>
+            <p class="edu-tech__desc">
+              A curated set of technologies, frameworks, and tools I actively use to 
+              transform creative concepts into high-quality digital solutions.
+            </p>
+
+            <div class="tech-grid">
+              <!-- HTML5 -->
+              <div class="tech-card" title="HTML5">
+                <div class="tech-card__icon">
+                  <i class="devicon-html5-plain colored"></i>
+                </div>
+                <span class="tech-card__name">HTML5</span>
+              </div>
+
+              <!-- CSS3 -->
+              <div class="tech-card" title="CSS3">
+                <div class="tech-card__icon">
+                  <i class="devicon-css3-plain colored"></i>
+                </div>
+                <span class="tech-card__name">CSS3</span>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="tech-card" title="JavaScript">
+                <div class="tech-card__icon">
+                  <i class="devicon-javascript-plain colored"></i>
+                </div>
+                <span class="tech-card__name">JavaScript</span>
+              </div>
+
+              <!-- Tailwind CSS -->
+              <div class="tech-card" title="Tailwind CSS">
+                <div class="tech-card__icon">
+                  <i class="devicon-tailwindcss-original colored"></i>
+                </div>
+                <span class="tech-card__name">Tailwind</span>
+              </div>
+
+              <!-- Flutter -->
+              <div class="tech-card" title="PostgreSQL">
+                <div class="tech-card__icon">
+                  <i class="devicon-postgresql-plain colored"></i>
+                </div>
+                <span class="tech-card__name">PostgreSQL</span>
+              </div>
+
+              <!-- Git -->
+              <div class="tech-card" title="Git">
+                <div class="tech-card__icon">
+                  <i class="devicon-git-plain colored"></i>
+                </div>
+                <span class="tech-card__name">Git</span>
+              </div>
+
+              <!-- VS Code -->
+              <div class="tech-card" title="Visual Studio Code">
+                <div class="tech-card__icon">
+                  <i class="devicon-vscode-plain colored"></i>
+                </div>
+                <span class="tech-card__name">VS Code</span>
+              </div>
+
+              <!-- Figma -->
+              <div class="tech-card" title="Figma">
+                <div class="tech-card__icon">
+                  <i class="devicon-figma-plain colored"></i>
+                </div>
+                <span class="tech-card__name">Figma</span>
+              </div>
+
+              <!-- React -->
+              <div class="tech-card" title="React">
+                <div class="tech-card__icon">
+                  <i class="devicon-react-original colored"></i>
+                </div>
+                <span class="tech-card__name">React</span>
+              </div>
+
+              <!-- Python -->
+              <div class="tech-card" title="Python">
+                <div class="tech-card__icon">
+                  <i class="devicon-python-plain colored"></i>
+                </div>
+                <span class="tech-card__name">Python</span>
+              </div>
+
+              <!-- MySQL -->
+              <div class="tech-card" title="MySQL">
+                <div class="tech-card__icon">
+                  <i class="devicon-mysql-plain colored"></i>
+                </div>
+                <span class="tech-card__name">MySQL</span>
+              </div>
+
+              <!-- GitHub -->
+              <div class="tech-card" title="GitHub">
+                <div class="tech-card__icon">
+                  <i class="devicon-github-original"></i>
+                </div>
+                <span class="tech-card__name">GitHub</span>
+              </div>
+              <!-- Java -->
+              <div class="tech-card" title="Java">
+                <div class="tech-card__icon">
+                  <i class="devicon-java-plain colored"></i>
+                </div>
+                <span class="tech-card__name">Java</span>
+              </div>
+              <!-- Gradle -->
+              <div class="tech-card" title="Gradle">
+                <div class="tech-card__icon">
+                  <i class="devicon-gradle-plain colored"></i>
+                </div>
+                <span class="tech-card__name">Gradle</span>
+              </div>
+              <!-- Canva -->
+              <div class="tech-card" title="Canva">
+                <div class="tech-card__icon">
+                  <i class="devicon-canva-plain colored"></i>
+                </div>
+                <span class="tech-card__name">Canva</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS (Light + Dot Pattern) ===== -->
+    <section class="section section--light projects-section" id="projects">
+      <div class="projects-section__dots" aria-hidden="true"></div>
+      <div class="container">
+        <!-- Section Header -->
+        <div class="projects-section__header">
+          <div class="projects-section__title-wrap">
+            <span class="projects-section__eyebrow">Portfolio Showcase</span>
+            <h2 class="projects-section__title"><em>Projects</em></h2>
+          </div>
+          <p class="projects-section__subtitle">
+            Koleksi karya terpilih yang memadukan estetika visual elegan, arsitektur kode modern, dan fungsionalitas
+            pengguna yang optimal.
+          </p>
+        </div>
+
+        <!-- Filter Kategori (Capsule Buttons) -->
+        <div class="projects-filter" role="tablist" aria-label="Filter kategori proyek">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+            All
+          </button>
+          <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">
+            Web Developer
+          </button>
+          <button class="filter-btn" data-filter="uiux" role="tab" aria-selected="false">
+            UI/UX Design
+          </button>
+          <button class="filter-btn" data-filter="graphic" role="tab" aria-selected="false">
+            Graphic Design
+          </button>
+        </div>
+
+        <!-- Projects Slider Wrapper -->
+        <div class="projects-slider-wrapper">
+          <div class="projects-slider-track" id="projects-track">
+
+            <!-- Card 1: Web Developer -->
+            <article class="project-slide-card" data-category="web" data-project-id="1" tabindex="0" role="button"
+              aria-label="Lihat detail Web Wisata Alam Lejja">
+              <div class="project-slide-card__thumb">
+                <!-- Ganti src dengan assets/images/project-1.jpg jika file sudah siap -->
+                <img src="assets/images/project0/project01.png"
+                  alt="Mockup Proyek — Web Wisata Alam Lejja" loading="lazy" class="project-slide-card__img" />
+                <div class="project-slide-card__overlay">
+                  <span class="project-slide-card__view-btn">
+                    <span>Lihat Detail</span>
+                    <i data-lucide="arrow-up-right"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="project-slide-card__body">
+                <span class="project-slide-card__role-tag">Web Developer</span>
+                <h3 class="project-slide-card__title">Web Wisata Alam Lejja</h3>
+                <p class="project-slide-card__desc">
+                  Sebuah website yang menampilkan informasi wisata alam Lejja, termasuk galeri foto, deskripsi lokasi, dan fasilitas yang tersedia.
+                </p>
+                <div class="project-slide-card__techs">
+                  <span class="project-tech-pill">HTML5</span>
+                  <span class="project-tech-pill">CSS3</span>
+                  <span class="project-tech-pill">JavaScript</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Web Developer -->
+            <article class="project-slide-card" data-category="web" data-project-id="2" tabindex="0" role="button"
+              aria-label="Lihat detail Rak Buku Alief">
+              <div class="project-slide-card__thumb">
+                <!-- Ganti src dengan assets/images/project-4.jpg jika file sudah siap -->
+                <img src="assets/images/project1/project11.png"
+                  alt="Mockup Proyek — Rak Buku Alief" loading="lazy" class="project-slide-card__img" />
+                <div class="project-slide-card__overlay">
+                  <span class="project-slide-card__view-btn">
+                    <span>Lihat Detail</span>
+                    <i data-lucide="arrow-up-right"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="project-slide-card__body">
+                <span class="project-slide-card__role-tag">Web Developer</span>
+                <h3 class="project-slide-card__title">Rak Buku Alief</h3>
+                <p class="project-slide-card__desc">
+                  Platform komunitas daring untuk penggemar buku, menampilkan katalog buku, meminjam buku, dan ulasan pengguna berbasis web.
+                </p>
+                <div class="project-slide-card__techs">
+                  <span class="project-tech-pill">HTML5</span>
+                  <span class="project-tech-pill">Tailwind CSS</span>
+                  <span class="project-tech-pill">JavaScript</span>
+                  <span class="project-tech-pill">CSS Grid</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Graphic Design -->
+            <article class="project-slide-card" data-category="graphic" data-project-id="3" tabindex="0" role="button"
+              aria-label="Lihat detail Luminary Coffee Brand Identity">
+              <div class="project-slide-card__thumb">
+                <!-- Ganti src dengan assets/images/project-3.jpg jika file sudah siap -->
+                <img src="assets/images/project2/project21.png"
+                  alt="Mockup Proyek — Infografis TIX ID" loading="lazy" class="project-slide-card__img" />
+                <div class="project-slide-card__overlay">
+                  <span class="project-slide-card__view-btn">
+                    <span>Lihat Detail</span>
+                    <i data-lucide="arrow-up-right"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="project-slide-card__body">
+                <span class="project-slide-card__role-tag">Graphic Design</span>
+                <h3 class="project-slide-card__title">Infografis TIX ID</h3>
+                <p class="project-slide-card__desc">
+                  Desain infografis untuk kampanye digital TIX ID, menampilkan informasi penting tentang layanan dan model bisnis yang ditawarkan.
+                </p>
+                <div class="project-slide-card__techs">
+                  <span class="project-tech-pill">Illustrator</span>
+                  <span class="project-tech-pill">Canva</span>
+                  <span class="project-tech-pill">Typography</span>
+                </div>
+              </div>
+            </article>
+
+            
+
+            <!-- Card 4: Graphic Design -->
+            <article class="project-slide-card" data-category="graphic" data-project-id="4" tabindex="0" role="button"
+              aria-label="Lihat detail Poster Coming Soon Event Organisasi">
+              <div class="project-slide-card__thumb">
+                <!-- Ganti src dengan assets/images/project-6.jpg jika file sudah siap -->
+                <img src="assets/images/project3/project31.png"
+                  alt="Mockup Proyek — Poster Coming Soon Event Organisasi" loading="lazy" class="project-slide-card__img" />
+                <div class="project-slide-card__overlay">
+                  <span class="project-slide-card__view-btn">
+                    <span>Lihat Detail</span>
+                    <i data-lucide="arrow-up-right"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="project-slide-card__body">
+                <span class="project-slide-card__role-tag">Graphic Design</span>
+                <h3 class="project-slide-card__title">Poster Coming Soon Event Organisasi</h3>
+                <p class="project-slide-card__desc">
+                  Desain poster untuk event organisasi yang akan datang.
+                </p>
+                <div class="project-slide-card__techs">
+                  <span class="project-tech-pill">Typography</span>
+                  <span class="project-tech-pill">Canva</span>
+                  <span class="project-tech-pill">Photoshop</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Slider Controls: Prev/Next & Dots -->
+        <div class="projects-slider-controls">
+          <button class="slider-arrow slider-arrow--prev" id="projects-prev" aria-label="Proyek sebelumnya">
+            <i data-lucide="chevron-left"></i>
+          </button>
+
+          <div class="slider-dots" id="projects-dots" role="tablist" aria-label="Navigasi slide proyek">
+            <!-- Dynamically populated or rendered -->
+          </div>
+
+          <button class="slider-arrow slider-arrow--next" id="projects-next" aria-label="Proyek berikutnya">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CONTACT (Dark) ===== -->
+    <section class="section section--dark contact" id="contact">
+      <div class="contact__spotlight" aria-hidden="true"></div>
+      <div class="container">
+        <div class="contact__grid">
+
+          <!-- Kolom Kiri: Let's get in touch & Detail Kontak -->
+          <div class="contact__info">
+            <span class="contact__eyebrow">Contact Me</span>
+            <h2 class="contact__heading"><em>Let's get in touch</em></h2>
+            <p class="contact__subtitle">
+              Punya ide proyek menarik, tawaran kolaborasi, atau sekadar ingin berdiskusi seputar teknologi &amp;
+              desain? Silakan hubungi saya melalui formulir atau saluran kontak berikut:
+            </p>
+
+            <div class="contact__details">
+              <!-- Phone / WhatsApp -->
+              <div class="contact-item">
+                <div class="contact-item__icon">
+                  <i data-lucide="phone"></i>
+                </div>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">Phone / WhatsApp</span>
+                  <a href="https://wa.me/6282220777312" target="_blank" rel="noopener noreferrer"
+                    class="contact-item__value">
+                    +62 822-2077-7312
+                  </a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="contact-item">
+                <div class="contact-item__icon">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">Email</span>
+                  <a href="mailto:aliefnurarfan@gmail.com" class="contact-item__value">
+                    aliefnurarfan@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-item">
+                <div class="contact-item__icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="contact-item__body">
+                  <span class="contact-item__label">Location</span>
+                  <span class="contact-item__value">Makassar, South Sulawesi, Indonesia</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Status Indicator Badge -->
+            <div class="contact__status">
+              <span class="status-dot"></span>
+              <span class="status-text">Available for freelance &amp; full-time opportunities</span>
+            </div>
+          </div>
+
+          <!-- Kolom Kanan: Form Kontak Minimalis (Underline Style) -->
+          <div class="contact__form-col">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-group form-group--underline">
+                <input type="text" name="name" id="contact-name" class="form-input form-input--underline"
+                  placeholder="Name / Company" required />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group form-group--underline">
+                  <input type="tel" name="phone" id="contact-phone" class="form-input form-input--underline"
+                    placeholder="Phone" />
+                </div>
+
+                <div class="form-group form-group--underline">
+                  <input type="email" name="email" id="contact-email" class="form-input form-input--underline"
+                    placeholder="Email" required />
+                </div>
+              </div>
+
+              <div class="form-group form-group--underline">
+                <input type="text" name="subject" id="contact-subject" class="form-input form-input--underline"
+                  placeholder="Subject" required />
+              </div>
+
+              <div class="form-group form-group--underline">
+                <textarea name="message" id="contact-message" class="form-input form-input--underline form-textarea"
+                  rows="4" placeholder="Type your message..." required></textarea>
+              </div>
+
+              <!-- Feedback message area -->
+              <div class="contact-form__feedback" id="contact-feedback" aria-live="polite"></div>
+
+              <div class="contact-form__footer">
+                <button type="submit" class="contact-submit-btn" id="contact-submit">
+                  <span>Send</span>
+                  <i data-lucide="arrow-right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <a href="#hero" class="footer__logo">A<span class="accent">.</span></a>
+        <span class="footer__name">MUH. ALIEF NUR AFANNI ARFAN</span>
+      </div>
+      <p class="footer__copy">
+        &copy; 2026 MUH. ALIEF NUR AFANNI ARFAN. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== PROJECT DETAIL MODAL ===== -->
+  <div class="project-modal" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="project-modal__backdrop" id="modal-backdrop"></div>
+    <div class="project-modal__dialog">
+      <!-- Tombol Tutup 'X' di pojok kanan atas -->
+      <button class="project-modal__close" id="modal-close" aria-label="Tutup modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="project-modal__grid">
+        <!-- Kolom Kiri: Detail Informasi -->
+        <div class="project-modal__info-col">
+          <div class="project-modal__header">
+            <span class="project-modal__badge" id="modal-badge">Web Developer</span>
+            <h3 class="project-modal__title" id="modal-title">Judul Proyek</h3>
+          </div>
+
+          <p class="project-modal__desc" id="modal-desc">
+            Deskripsi singkat proyek akan tampil di sini.
+          </p>
+
+          <!-- Modul & Fitur Utama -->
+          <div class="project-modal__section">
+            <h4 class="project-modal__section-heading">
+              <i data-lucide="check-circle-2" class="project-modal__heading-icon"></i>
+              Modul &amp; Fitur Utama
+            </h4>
+            <ul class="project-modal__features" id="modal-features">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+
+          <!-- Tech Stack & Tools -->
+          <div class="project-modal__section">
+            <h4 class="project-modal__section-heading">
+              <i data-lucide="cpu" class="project-modal__heading-icon"></i>
+              Tech Stack &amp; Tools
+            </h4>
+            <div class="project-modal__techs" id="modal-techs">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Action Links -->
+          <div class="project-modal__actions">
+            <a href="#" class="modal-btn modal-btn--primary" id="modal-live-link" target="_blank"
+              rel="noopener noreferrer">
+              <span>Live Demo</span>
+              <i data-lucide="external-link"></i>
+            </a>
+            <a href="#" class="modal-btn modal-btn--outline" id="modal-repo-link" target="_blank"
+              rel="noopener noreferrer">
+              <span>Source Code</span>
+              <i data-lucide="github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Media Showcase (Dark Theme Container + Slider) -->
+        <div class="project-modal__media-col">
+          <div class="modal-gallery">
+            <div class="modal-gallery__screen">
+              <img id="modal-img" src="" alt="Screenshot Mockup Proyek" class="modal-gallery__img" />
+
+              <!-- Navigasi Panah Kiri / Kanan -->
+              <button class="modal-gallery__nav modal-gallery__nav--prev" id="modal-prev-img"
+                aria-label="Gambar sebelumnya">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="modal-gallery__nav modal-gallery__nav--next" id="modal-next-img"
+                aria-label="Gambar berikutnya">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <!-- Image counter badge -->
+              <div class="modal-gallery__counter" id="modal-counter">1 / 3</div>
+            </div>
+
+            <!-- Indikator Titik (Pagination Dots) di bawahnya -->
+            <div class="modal-gallery__dots" id="modal-dots">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
