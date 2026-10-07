@@ -2469,6 +2469,26 @@ h6 {
   .footer__socials {
     justify-content: center;
   }
+
+  .hero__name {
+    white-space: normal; 
+    font-size: clamp(1.85rem, 9.5vw, 2.4rem); 
+    font-weight: 800;                  
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    width: 100%;
+    margin-bottom: var(--space-lg);
+  }
+
+   .hero__roles {
+    font-size: 0.82rem;                     
+    line-height: 1.6;
+    color: var(--clr-text-on-dark-muted);
+    max-width: 80%;                        
+    margin-inline: auto;
+    margin-bottom: var(--space-xl);
+    opacity: 0.85;
+  }
 }
 
 
@@ -2636,7 +2656,28 @@ h6 {
 
   .hero__name {
     white-space: normal; 
-    font-size: clamp(1.85rem, 6.5vw, 2.4rem); 
+    font-size: clamp(1.85rem, 10.5vw, 2.4rem); 
+    font-weight: 800;                  
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    width: 100%;
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero__roles {
+    font-size: 0.82rem;                     
+    line-height: 1.6;
+    color: var(--clr-text-on-dark-muted);   
+    max-width: 80%;                         
+    margin-inline: auto;
+    margin-bottom: var(--space-xl);
+    opacity: 0.85;
+  }
+
+  /* Ukuran titik pemisah antar profesi dibuat pas */
+  .hero__dot {
+    margin-inline: 0.35em;
+    font-size: 0.75rem;
   }
   
   .mobile-break {
