@@ -1,4 +1,4 @@
-# 🌐 Portofolio Web - Alief Nur Arfan
+# 🌐 Portofolio Web - Muh. Alief Nur Afanni Arfan
 
 Selamat datang di repositori kode sumber untuk website portofolio pribadi saya. Website ini dirancang untuk menampilkan profil, keahlian, pengalaman, serta kumpulan proyek yang pernah saya kerjakan secara interaktif dan responsif.
 
@@ -68,6 +68,3 @@ Jika Anda ingin menjalankan atau memodifikasi proyek ini di komputer lokal Anda:
 ## 📬 Kontak
 
 Tertarik untuk berkolaborasi atau sekadar menyapa? Jangan ragu untuk menghubungi saya melalui tautan kontak yang tersedia di website portofolio atau melalui profil GitHub saya di [@aliefnarfan](https://github.com/aliefnarfan).
-
----
-*Dibuat dengan ❤️ oleh Alief Nur Arfan*
